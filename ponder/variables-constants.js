@@ -21,7 +21,7 @@ console.log(result);
 result = ONE + TWO;
 console.log(result);
 
-result = ONE + Number(two);
+result = ONE + Number(TWO);
 console.log(result);
 
 // Dealing with Scope
