@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+header, footer {
+    color: #222;
+    padding: 1rem;
+    text-align: center;
+}
+
+.full-line {
+    width: 100vw;
+    margin: 0;
+    border: none;
+    border-top: 2px solid gold;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+}
+
+.main-nav {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: center;
+}
+.main-nav li {
+    padding: 2px;
+}
+.main-nav a {
+    color: #b30059;
+    text-decoration: none;
+}
+#book-list {
+    padding: 0 2rem;
+}
+
+.book {
+    border-top: 2px solid gold;
+    padding: 1rem;
+    max-width: 700px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: auto min-content;
+}
+
+.book h2 {
+    color: #b30059;
+    font-size: 1.5rem;
+    text-align: center;
+    grid-row: 5/6;
+    grid-column: 1/2;
+}
+
+.book p {
+    padding-right: 10px;
+    grid-column: 2/3;
+    text-align: end;
+}
+
+.book img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    grid-row: 6/7;
+}
+
+#desc {
+    grid-column: 1/3;
+    text-align: justify;
+}
+
+@media (min-width: 800px) {
+    .main-nav {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        justify-content: center;
+    }
+
+    .book {
+        display: grid;
+        grid-template-columns: min-content 2px auto;
+        grid-column-gap: 40px;
+        justify-content: center;
+        border-top:none;
+    }   
+
+    .book p {
+        padding-right: 10px;
+        grid-column: 1/2;
+        text-align: end;
+    }
+
+    .vertical-divider {
+        background-color: gold;
+        width: 2px;
+        grid-row: 1/12;
+        grid-column: 2/3;
+    }
+
+    .book h2 {
+        color: #b30059;
+        font-size: 1.5rem;
+        text-align: left;
+        grid-row: 1/3;
+        grid-column: 3/4;
+    }
+
+    .book img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        grid-column: 3/4;
+        grid-row: 3/11;
+    }
+
+    #desc {
+        grid-column: 3/4;
+        grid-row:11/12;
+        text-align: justify;
+    }
+}
+          
