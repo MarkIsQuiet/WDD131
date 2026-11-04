@@ -20,7 +20,7 @@ const aCourse = {
     }
   };
 
-
+ 
 console.log(aCourse.code);  
 console.log(aCourse.name);  
 
