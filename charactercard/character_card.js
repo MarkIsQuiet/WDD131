@@ -1,3 +1,6 @@
+const deathModal = document.getElementById("deathModal");
+const closeModal = document.getElementById("closeModal");
+
 const snortleblatCard = {
     img_src: 'snortleblat.webp',
     img_alt: 'snortleblat portrait',
@@ -10,7 +13,7 @@ const snortleblatCard = {
             this.health = this.health - 20;
         }
         else {
-            // Death Message
+            deathModal.classList.remove("hidden");
         }
     },
     levelUp: function () {
@@ -50,3 +53,7 @@ function renderCharacter(character) {
     });
 }
 renderCharacter(snortleblatCard);
+
+closeModal.addEventListener("click", () => {
+    deathModal.classList.add("hidden");
+});
